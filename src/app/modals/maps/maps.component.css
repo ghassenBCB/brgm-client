@@ -1,0 +1,16 @@
+.buttonClose i{
+    font-size: 25px;
+   }
+   .modal-title{
+       margin-bottom: 0px !important;
+   }
+   .modal-basic-title{
+       margin-bottom: 20px;
+   }
+   .listModalTableView{
+       width: 100%;
+   }
+   
+   .listModalTableView .p-tabview .p-tabview-panels{
+       border-radius: 0px !important;
+   }

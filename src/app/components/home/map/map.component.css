@@ -1,0 +1,27 @@
+ 
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  min-height: 100%;
+  width: 100%;
+}
+#maps{
+  min-height: 100vh;
+}
+
+#ol-map {
+  width: calc(100% - 360px);
+  height: 93vh;
+  top: 7vh;
+  position: absolute;
+}
+
+

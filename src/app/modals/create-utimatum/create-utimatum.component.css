@@ -1,0 +1,174 @@
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    /* height: 34px; */
+    height: auto;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #075ba0;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #075ba0;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(19px);
+    -ms-transform: translateX(19px);
+    transform: translateX(19px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /***fin slider*****/
+
+  .comment-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .comment-p {
+    margin-top: 2rem;
+  }
+  
+  .buttonCloseTopRight {
+    align-self: flex-start;
+  }
+  
+  .modal-header-content {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .modal-title {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  
+  .modal-title h3,
+  .modal-title p {
+    margin: 0;
+  }
+  
+  
+  .comment-text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comment-text h3,
+  .comment-text p {
+    margin: 0;
+    text-align: left;
+  }
+  
+  .p-inputtextarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+  .buttonGroup {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 1rem;
+  }
+  
+  .buttonGroup button {
+    width: 50%;
+    flex: 1;
+    margin: 0 5px;
+  }
+  
+  .modal-body {
+    border-radius: 22px;
+  }
+  
+  .p-button {
+    display: inline-block !important;
+  }
+  
+  .custom-icon {
+    color: darkgreen;
+    text-shadow: 3px 5px 10px rgba(0, 255, 0, 0.5);
+  }
+  
+   
+
+   /* :host  .user-form {
+    width: 30%;
+  }
+  
+  :host  .p-inputtext {
+    width: 100%;
+  } */
+  
+  
+  .inline-elements-container {
+    display: flex;
+    align-items: center; /* Aligner les éléments verticalement */
+  }
+  
+  .field {
+    margin-bottom: 25px;
+    flex-grow: 1; /* Les champs de saisie occupent tout l'espace disponible */
+    flex-basis: 0; /* La largeur de base est réinitialisée à 0 */
+    margin-right: 15px; /* Ajouter de l'espace entre les champs de saisie */
+  }
+
+  .field-label-inline {
+    margin-left: 5px; /* Espacement entre le switch et le texte "actif" */
+  }
+
+  .modal-container{
+    resize: none;
+    overflow: hidden;
+  }
+  

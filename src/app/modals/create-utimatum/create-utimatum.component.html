@@ -1,0 +1,73 @@
+<div class="modal-container" style="min-height: 220px; min-width: 30vw; max-width: 30vw; padding: 2.5rem 0 0 1px;">
+  <div class="modal-header flex align-items-center justify-content-between modal-basic-title">
+    <div class="modal-header-content">
+      <div class="modal-title">
+        <div>
+          <div class="icon-comment">
+            <i class="pi pi-comment custom-icon" style="font-size: 2rem;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="buttonCloseTopRight">
+      <button class="p-link layout-topbar-menu-button layout-topbar-button" (click)="hide()">
+        <i color="#eee" class="pi pi-times"></i>
+      </button>
+    </div>
+  </div>
+  <div class="modal-body mt-5">
+    <form [formGroup]="ultimatumForm" (ngSubmit)="addUltimatum()" novalidate>
+      
+      <!-- <div formGroupName="ultimatumForm"> -->
+        <h4>Nouvelle période</h4>
+        <div class="field">
+          <label for="periodName" class="block">Nom période<span style="color:rgb(189, 19, 19);">*</span></label>
+          <input id="periodName" type="text" pInputText placeholder="" formControlName="periodName" style="width: 100%;"/>
+        </div>
+        <div class="inline-elements-container">
+        <div class="field">
+          <label for="startperiod" class="block">Date début<span style="color:rgb(189, 19, 19);">*</span></label>
+          <!-- <input type="text" pInputText placeholder="" formControlName="startperiod" /> -->
+          <p-calendar id="startperiod" formControlName="startPeriod" />
+          <!--<small class="p-error block" *ngIf="
+              ultimatumForm.get('address')?.get('postCode')?.invalid &&
+              ultimatumForm.get('address')?.get('postCode')?.dirty
+            ">
+            PostCode is required</small>-->
+        </div>
+       <div class="field">
+          <label for="endperiod" class="block">Date de fin<span style="color:rgb(189, 19, 19);">*</span></label>
+          <!-- <input type="text" pInputText placeholder="" formControlName="endperiod" /> -->
+         
+          <p-calendar id="endperiod" formControlName="endPeriod"></p-calendar>
+          <!--<small class="p-error block" *ngIf="
+              ultimatumForm.get('address')?.get('postCode')?.invalid &&
+              ultimatumForm.get('address')?.get('postCode')?.dirty
+            ">
+            PostCode is required</small>-->
+        </div>
+      </div>
+       <div class="field">
+         <div class="inline-elements-container">
+            <label for="isActivated" class="switch">
+              <input id="isActivated" type="checkbox" formControlName="isActivated">
+              <span class="slider round"></span>
+              
+            </label>
+            <div class="field-label-inline">actif</div>
+          </div>
+       </div>
+        <!-- {{ultimatumForm.value | json}} -->
+      <!-- </div> -->
+    <!-- Buttons -->
+          <div class="buttonGroup">
+            <button class="p-button p-button-secondary" (click)="hide()">Annuler</button>
+            <button pButton type="submit" [disabled]="ultimatumForm.invalid" class="p-button p-button-info" >Valider</button>
+          </div>
+      <!--<button pButton type="submit" label="Submit" [disabled]="ultimatumForm.invalid"></button>-->
+    </form>
+  </div>
+</div>
+
+
+

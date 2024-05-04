@@ -1,0 +1,52 @@
+:host {
+    border-radius: 10px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.9; /* Opacité de 70% */
+    background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond blanc clair avec opacité de 40% */
+}
+
+
+.scale {
+    margin-top:15px;
+    width: 170px;
+    height: 400px;
+    display: flex;
+    justify-content: center; /* Alignement à gauche */
+    align-items: flex-start; /* Alignement en haut */
+    flex-direction: column; /* Affichage des sections les unes au-dessus des autres */
+}
+
+.scale section {
+    font-family: Arial, sans-serif;
+    font-size:13px;
+    /* margin-bottom: 10px; Espace entre les sections */
+    padding-left: 20px;
+}
+
+.prime-icons .pi {
+    font-size:13px;
+    font-weight: bold;
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+}
+
+.scale section ul {
+    list-style-type: none; /* Supprime les puces */
+    padding-left: 0; /* Supprime le décalage à gauche */
+}
+
+.scale section ul li {
+    
+    font-size: 11px; /* Taille de police réduite */
+    padding:2px;
+}
+
+
+section h6 {
+    margin-bottom: 12px; /* Ajustez la marge entre le titre h6 et la liste */
+}
+
+.prime-icons {
+    margin-top: -5px; /* Ajustez la marge négative pour rapprocher le ul du h6 */
+}

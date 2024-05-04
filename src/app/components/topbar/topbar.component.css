@@ -1,0 +1,41 @@
+.exporter{
+    margin-right: 15px;
+}
+.envoyerRapel{
+    color: #3B82F6;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    /* margin-top: 15px; */
+    height: 20px;
+    margin-right:15px;
+    line-height: 15px;
+    display: flex;
+     justify-content: center; 
+     align-items: center;
+
+}
+
+.heightProgressBar{
+     flex: 1;
+     margin-left: 0.5rem;
+     height: 4px;
+}
+.DateEditer {
+    margin: 0px 15px;
+    color: #3B82F6;
+  }
+
+ /* .pgbar{
+    width: 150px; display: flex; align-items: center;
+ }  */
+
+
+ /* .custom-calendar-container {
+    background-color: transparent !important;
+    border: none;
+  } */
+
+  /* .transparent-calendar .p-datepicker {
+  background-color: transparent !important;
+} */

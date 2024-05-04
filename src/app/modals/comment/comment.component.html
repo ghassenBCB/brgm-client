@@ -1,0 +1,37 @@
+<div style="min-height: 220px; min-width: 30vw; max-width: 30vw; padding: 2.5rem 1px;">
+    <div class="modal-header flex align-items-center justify-content-between modal-basic-title">
+      <div class="modal-header-content">
+        <div class="modal-title">
+          <div>
+            <div class="icon-comment">
+              <i class="pi pi-comment custom-icon" style="font-size: 2rem;"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="buttonCloseTopRight">
+        <button class="p-link layout-topbar-menu-button layout-topbar-button" (click)="hide()">
+          <i color="#eee" class="pi pi-times"></i>
+        </button>
+      </div>
+    </div>
+    <div class="modal-body mt-5">
+      <div class="comment-text">
+        <h4 class="comment-title">Ajouter un commentaire</h4>
+        <p>Saisissez ici le commentaire global pour la période {{ currentDate }}</p>
+      </div>
+  
+      <div class="p-inputtextarea-container">
+        <p class="comment-p">Commentaire</p>
+        <textarea id="comment" class="p-inputtextarea" rows="6" style="width: 100%;"></textarea>
+      </div>
+      <div class="buttonGroup">
+        <button class="p-button p-button-secondary" >Annuler</button>
+        <button class="p-button p-button-primary">Valider</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  

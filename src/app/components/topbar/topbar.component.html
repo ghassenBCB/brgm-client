@@ -1,0 +1,78 @@
+<div class="layout-topbar" id="top-bar">
+
+      
+      
+      
+    <div class=" flex justify-content-center align-items-center" >
+        <strong style="font-size: 20px; font-family:sans-serif;">{{ currentDate }} </strong>
+
+      <div class="relative-container" >
+        <div class="DateEditer" (click)="showCalendar = !showCalendar" [ngStyle]="{ 'display': checkClick }"><i class="pi pi-angle-down" style="font-size: 15px" ></i> éditer</div>
+        <div *ngIf="showCalendar" class="calendar-container">
+          <p-calendar [(ngModel)]="selectedDate" [view]="'month'" [dateFormat]="'mm/yy'" [showIcon]="true" (onSelect)="updateCurrentDate($event);"></p-calendar>
+        </div>
+      </div>
+
+
+        <p-button id="createUltimatum" label="nouvelle période" icon="pi pi-plus" class="exporter" severity="secondary" (onClick)="createUltimatum()" [ngStyle]="{ 'display': checkClick }"></p-button>
+    </div>
+<!-- 
+    <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button">
+        <i class="pi pi-ellipsis-v"></i>
+    </button> -->
+
+    <div #topbarmenu class="layout-topbar-menu align-items-center">
+        <div class="envoyerRapel" [ngStyle]="{ 'display': checkClick }" > envoyer rappel</div>
+        <div class="envoyerRapel">
+            <div style="width: 120px; ">
+                <p-progressBar [value]="40" [showValue]="false" color="#22c55e" [styleClass]="'heightProgressBar'" [style]="{'height': '10px', 'margin-right': '5px'}"></p-progressBar>
+                
+            </div>
+            <span style="color: black; font-size: 12px; font-weight: 600;"> 40%</span>
+        </div>
+      
+        <p-button id="Commentaire" label="Commentaire" icon="pi pi-twitch" class="exporter" severity="secondary" (onClick)="commenter()" [ngStyle]="{ 'display': checkClick }"></p-button>
+        <p-button id="Exporter" label="Exporter" class="exporter"  (onClick)="exporter()" [ngStyle]="{ 'display': checkClick }"></p-button>
+        <p-button label="Quitter" severity="secondary"></p-button>
+    </div>
+</div>
+
+
+<!-- <div class="layout-topbar">
+    
+    <div class=" flex justify-content-center align-items-center">
+        <strong>Février 2024 </strong>
+        <div class="DateEditer">éditer </div>
+        <p-button label="nouvelle période" icon="pi pi-plus" class="exporter" severity="secondary"></p-button>
+    </div>
+
+
+    <button #topbarmenubutton class="p-link layout-topbar-menu-button layout-topbar-button" (click)="showProfileSidebar()">
+        <i class="pi pi-ellipsis-v"></i>
+    </button>
+
+    <div #topbarmenu class="layout-topbar-menu">
+        <div class="envoyerRapel"> envoyer rappel</div> -->
+        <!-- <div class="envoyerRapel">
+            <div style="width: 150px;">
+
+                <p-progressBar [value]="40" color="#22c55e" [styleClass]="'heightProgressBar'"
+                    [style]="{'height': '12px' }">
+                </p-progressBar>
+            </div>
+        </div> -->
+        <!-- <div class="envoyerRapel">
+            <div style="width: 150px;">
+                <p-progressBar [value]="40" [showValue]="false" color="#22c55e" [styleClass]="'heightProgressBar'" [style]="{'height': '12px', 'margin-right': '5px'}"></p-progressBar>
+                <span style="color: black; font-size: 13px;">40%</span>
+            </div>
+        </div>
+        
+
+        <p-button label="Commentaire" icon="pi pi-twitch" class="exporter" severity="secondary"
+           ></p-button>
+        <p-button label="Exporter" class="exporter"  (onClick)="show()"></p-button>
+        <p-button label="Quitter" severity="secondary"></p-button>
+    </div>
+    
+</div> -->
